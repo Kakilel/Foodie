@@ -1,31 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Foodie</title>
-</head>
-<body>
+  </head>
+  <body>
+    <!-- HEADER -->
     <header>
-        <h2>FOOD-<span>IE</span></h2>
-        <img src="" alt="logo">
-        <div class="nav-bar">
-            <nav>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </nav>
-        </div>
+      <h2>FOOD-<span>IE</span></h2>
+      <img src="" alt="logo" />
+      <div class="nav-bar">
+        <nav>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </nav>
+      </div>
     </header>
+
+    <!-- ABOUT -->
     <div class="info">
-        <p>
-            Foodie is an online calorie tracker that helps you manage your calorie intake and maintain a healthy lifestyle.
-            With a user-friendly interface, you can easily log your meals and track your daily calorie consumption.
-        </p>
-   <button>Get Started</button>
+      <p>
+        Foodie is an online calorie tracker that helps you manage your calorie
+        intake and maintain a healthy lifestyle. With a user-friendly interface,
+        you can easily log your meals and track your daily calorie consumption.
+      </p>
+      <button>Get Started</button>
     </div>
-    
+
+    <!-- INPUTS -->
+    <div class="inputs">
+      <div class="input-grp">
+        <label for="Food">Food</label>
+        <input
+          type="text"
+          name="Food"
+          id="Food"
+          placeholder="Enter type of Food"
+          required
+        />
+      </div>
+      <div class="input-grp">
+        <label for="Calories">Calories</label>
+        <input
+          type="amount"
+          name="Calories"
+          id="Calories"
+          placeholder="Enter number of calories in grams"
+          required
+        />
+      </div>
+      <div class="input-grp">
+        <label for="Date"></label>
+        <input type="date" name="Date" id="Date" />
+      </div>
+      <!-- SUBMIT-BTN -->
+        <div class="Submit"><button>Submit</button></div>
+    </div>
 </body>
 </html>
