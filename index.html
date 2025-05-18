@@ -4,18 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Foodie</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
   </head>
   <body>
     <!-- HEADER -->
     <header>
-      <h2>FOOD-<span>IE</span></h2>
-      <img src="" alt="logo" />
+      <h2>FOOD<span>IE</span></h2>
+      <img src="logo.png" alt="logo" width="150" height="150" />
       <div class="nav-bar">
         <nav>
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li class="nav">ABOUT</li>
+            <li class="nav">TRACKER</li>
+            <li class="nav">HISTORY</li>
           </ul>
         </nav>
       </div>
@@ -23,42 +25,73 @@
 
     <!-- ABOUT -->
     <div class="info">
-      <p>
-        Foodie is an online calorie tracker that helps you manage your calorie
-        intake and maintain a healthy lifestyle. With a user-friendly interface,
-        you can easily log your meals and track your daily calorie consumption.
+      <h2>Foodie : The Smart Calorie Tracker for Modern Eaters</h2>
+      <p class="p1">
+        Foodie is a modern and intuitive calorie tracking app designed to help
+        users take control of their diet, understand their nutritional intake,
+        and achieve their health goals—whether it’s weight loss, muscle gain, or
+        simply maintaining a balanced lifestyle. With its sleek interface and
+        intelligent features, Foodie makes tracking what you eat simple,
+        insightful, and even enjoyable.
       </p>
-      <button>Get Started</button>
+      <p class="p2">
+        Foodie stands out with its user-friendly design and a holistic approach
+        to wellness. Whether you're a meticulous macro counter or just want to
+        be more mindful about what you eat, Foodie adapts to your style.
+      </p>
+      <button class="about-btn">Get Started</button>
     </div>
 
     <!-- INPUTS -->
-    <div class="inputs">
-      <div class="input-grp">
-        <label for="Food">Food</label>
-        <input
-          type="text"
-          name="Food"
-          id="Food"
-          placeholder="Enter type of Food"
-          required
-        />
+    <main>
+      <div class="inputs">
+        <div class="input-grp">
+          <label for="Food">Food:</label>
+          <input
+            type="text"
+            name="Food"
+            id="Food"
+            placeholder="Enter type of Food"
+            required
+          />
+        </div>
+        <div class="input-grp">
+          <label for="Calories">Calories:</label>
+          <input
+            type="amount"
+            name="Calories"
+            id="Calories"
+            placeholder="Enter number of calories in grams"
+            required
+          />
+        </div>
+        <div class="input-grp">
+          <label for="Date">Date:</label>
+          <input type="date" name="Date" id="Date" />
+        </div>
+        <!-- SUBMIT-BTN -->
+        <div><button class="submit-btn">Submit</button></div>
       </div>
-      <div class="input-grp">
-        <label for="Calories">Calories</label>
-        <input
-          type="amount"
-          name="Calories"
-          id="Calories"
-          placeholder="Enter number of calories in grams"
-          required
-        />
+
+      <!-- SHOWCASE SECTION -->
+      <div id="showcase-consumption">
+        <table>
+          <thead>
+            <tr>
+              <th>Food</th>
+              <th>Calories</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody class="head"></tbody>
+          <tfoot>
+            <tr>
+              <th>Total</th>
+            </tr>
+          </tfoot>
+          <tbody class="foot"></tbody>
+        </table>
       </div>
-      <div class="input-grp">
-        <label for="Date"></label>
-        <input type="date" name="Date" id="Date" />
-      </div>
-      <!-- SUBMIT-BTN -->
-        <div class="Submit"><button>Submit</button></div>
-    </div>
-</body>
+    </main>
+  </body>
 </html>
