@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // 
+
 // INPUT_VARIABLES
 const foodInp = document.querySelector(".food-inp input")
 const caloriesInp = document.querySelector(".calories-inp input")
@@ -9,67 +9,71 @@ const aboutBtn = document.querySelector(".about-btn")
 const submitBtn = document.querySelector(".submit-btn")
 // VARIABLES
 const show = document.querySelector(".show")
+const foodTable = document.querySelector(".food-table")
 
-let amounts =[];
+
     
-aboutBtn.addEventListener("click",()=>{})
+aboutBtn.addEventListener("click",()=>{
+    alert("Welcome to foodie lets get tracking!!")
+})
 
-submitBtn.addEventListener("submit",()=>{
+submitBtn.addEventListener("click",()=>{
     const food = foodInp.value;
     const calories  = caloriesInp.value;
-    const amount = amountInp.value;
-    amounts.push(amount);
+    const amount = (amountInp.value);
 
-
+    
+    if(!food || isNaN(calories)|| isNaN(amount)){
+        alert("Please enter valid values");
+        return;
+    }
     if(!food){
         alert("Please enter type of food");
         return;
     }
-    if(!calories){
+ else if(!calories){
         alert("Please enter calories");
         return;
     }
-    if(!amount){
+ else if(!amount) {
         alert("Please enter amount");
         return;
     }
     // CREATE ROW table
     
-    const row = document.createElement("tbody [class='food-table']");
+    const row = document.createElement("tr");
+    foodTable.classList.add("food-table");
+    row.innerHTML=
     `<tr>
-    <td>${food}</td>
-    <td>${calories}</td>
-    <td>${amount}</td>
+    <th>${food}</th>
+    <th>${calories}</th>
+    <th>${amount}</th>
+    <th><button class="delete-btn">Delete</button></th>
     </tr>
-    <button class="delete-btn">Delete</button>
     `;
 
-    show.appendChild(row);
+    foodTable.appendChild(row);
+    
+    // if(food && calories && amount){
+    //         const date = new Date().toLocaleString();
+    //         const totalAmount = amounts.reduce((acc, curr) => acc + parseInt(curr),0)/1000;
+    //         const totalCalories = (calories * amount) ;
+    //         const totalCaloriesRow = document.createElement("tbody");
+    //         totalCaloriesRow.classList.add("total-calories");
+    //         totalCaloriesRow.innerHTML =
+    //         `
+    //         <td>${date}</td>;
+    //         <td>${totalCalories}</td>;
+    //         <td>${totalAmount}</td>;
+    //         `;
+    //       }
+    // show.appendChild(totalCaloriesRow);
+    
     // CLEAR INPUTS
     foodInp.value = "";
     caloriesInp.value = "";
     amountInp.value = "";
-    
-    if(food && calories && amount){
-            const date = new Date().toLocaleString();
-            const totalAmount = amounts.reduce((acc, curr) => acc + parseInt(curr),0)/1000;
-            const totalCalories = (calories * amount) ;
-            const totalCaloriesRow = document.createElement("tbody [class='total-calories']");
-            totalCaloriesRow.innerHTML =
-            `<tr>
-                <td>${date}</td>;
-                <td>${totalCalories}</td>;
-                <td>${totalAmount}</td>;
-            </tr>
-            `;
-            // CLEAR INPUTS  
-            foodInp.value = "";
-            caloriesInp.value = "";
-            amountInp.value = "";
-        }
-    show.appendChild(totalCaloriesRow);
-
-})
-})
+});
+});
 
     

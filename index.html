@@ -47,7 +47,7 @@
         <div class="input-grp food-inp">
           <label for="Food">Food:</label>
           <input
-          type="text"
+          type="worde3d2"
           name="Food"
           id="Food"
           placeholder="Enter type of Food"
@@ -57,7 +57,7 @@
         <div class="input-grp calories-inp">
           <label for="Calories">Calories:</label>
           <input
-          type="amount"
+          type="number"
           name="Calories"
           id="Calories"
           required
@@ -65,7 +65,7 @@
         </div>
         <div class="input-grp amount-inp">
           <label for="Amount">Amount:</label>
-          <input type="Amount" name="Amount" id="Amount" placeholder="Enter Amount in grams"/>
+          <input type="number" name="Amount" id="Amount" placeholder="Enter Amount in grams"/>
         </div>
         <!-- SUBMIT-BTN -->
         <button class="submit-btn">Submit</button>
@@ -82,11 +82,6 @@
             </tr>
           </thead>
           <tbody class="food-table"></tbody>
-          <tfoot>
-            <tr>
-              <th>Total</th>
-            </tr>
-          </tfoot>
           <tbody class="total-calories"></tbody>
         </table>
       </div>

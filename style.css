@@ -206,3 +206,7 @@ tfoot tr{
 tfoot th{
     text-align:center;
 }
+th {
+    background-color: blue;
+    color: white;
+}
