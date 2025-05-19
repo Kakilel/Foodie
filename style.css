@@ -167,7 +167,7 @@ header img{
 
 
 /* SHOWCASE_SECTION */
-#showcase-consumption{
+.show{
     max-width: 1200px;
     margin:10px auto;
     border: 1px solid white;
@@ -190,7 +190,19 @@ thead tr{
     border: none;
     padding: 60px;   
 }
-thead th{
+thead td{
     text-align:center;
 }
-    
+.hidden{
+    display: none;
+}
+tfoot tr{
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    padding: 60px;   
+}
+tfoot th{
+    text-align:center;
+}

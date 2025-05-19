@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Foodie</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
   </head>
   <body>
     <!-- HEADER -->
@@ -22,10 +21,10 @@
         </nav>
       </div>
     </header>
-
+    
     <!-- ABOUT -->
     <div class="info">
-      <h2>Foodie : The Smart Calorie Tracker for Modern Eaters</h2>
+      <h2>Foodie :Smart Calorie Tracker for Modern Eaters</h2>
       <p class="p1">
         Foodie is a modern and intuitive calorie tracking app designed to help
         users take control of their diet, understand their nutritional intake,
@@ -41,57 +40,58 @@
       </p>
       <button class="about-btn">Get Started</button>
     </div>
-
+    
     <!-- INPUTS -->
     <main>
       <div class="inputs">
-        <div class="input-grp">
+        <div class="input-grp food-inp">
           <label for="Food">Food:</label>
           <input
-            type="text"
-            name="Food"
-            id="Food"
-            placeholder="Enter type of Food"
-            required
+          type="text"
+          name="Food"
+          id="Food"
+          placeholder="Enter type of Food"
+          required
           />
         </div>
-        <div class="input-grp">
+        <div class="input-grp calories-inp">
           <label for="Calories">Calories:</label>
           <input
-            type="amount"
-            name="Calories"
-            id="Calories"
-            placeholder="Enter number of calories in grams"
-            required
+          type="amount"
+          name="Calories"
+          id="Calories"
+          required
           />
         </div>
-        <div class="input-grp">
-          <label for="Date">Date:</label>
-          <input type="date" name="Date" id="Date" />
+        <div class="input-grp amount-inp">
+          <label for="Amount">Amount:</label>
+          <input type="Amount" name="Amount" id="Amount" placeholder="Enter Amount in grams"/>
         </div>
         <!-- SUBMIT-BTN -->
-        <div><button class="submit-btn">Submit</button></div>
+        <button class="submit-btn">Submit</button>
       </div>
-
+      
       <!-- SHOWCASE SECTION -->
-      <div id="showcase-consumption">
+      <div class="show">
         <table>
           <thead>
             <tr>
-              <th>Food</th>
-              <th>Calories</th>
-              <th>Date</th>
+              <td>Food</td>
+              <td>Calories</td>
+              <td>Amount</td>
             </tr>
           </thead>
-          <tbody class="head"></tbody>
+          <tbody class="food-table"></tbody>
           <tfoot>
             <tr>
               <th>Total</th>
             </tr>
           </tfoot>
-          <tbody class="foot"></tbody>
+          <tbody class="total-calories"></tbody>
         </table>
       </div>
     </main>
   </body>
-</html>
+  <script src="script.js"></script>
+  </html>
+  
