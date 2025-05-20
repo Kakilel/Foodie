@@ -45,12 +45,17 @@ submitBtn.addEventListener("click",()=>{
     foodTable.classList.add("food-table");
     row.innerHTML=
     `<tr>
-    <th>${food}</th>
-    <th>${calories}</th>
-    <th>${amount}</th>
-    <th><button class="delete-btn">Delete</button></th>
+    <td>${food}</td>
+    <td>${calories}</td>
+    <td>${amount}</td>
+    <td><button class="delete-btn">Delete</button></td>
     </tr>
     `;
+    // DELETE BUTTON
+    const deleteBtn = row.querySelector(" .delete-btn");
+    deleteBtn.addEventListener("click", () =>{
+        foodTable.removeChild(row);
+    })
 
     foodTable.appendChild(row);
     

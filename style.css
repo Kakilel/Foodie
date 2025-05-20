@@ -206,7 +206,11 @@ tfoot tr{
 tfoot th{
     text-align:center;
 }
-th {
-    background-color: blue;
+tbody tr{
+    right: 0;
+    background-color: rgb(202, 202, 218);
     color: white;
+    text-align:center;
+    font-size: 1.3rem;
+   
 }
