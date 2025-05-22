@@ -26,8 +26,6 @@ submitBtn.addEventListener("click", () => {
   const food = foodInp.value;
   //   const calories = caloriesInp.value;
   const amount = amountInp.value;
-  //   const foodTotalCalories = parseFloat(calories) * parseFloat(amount);
-
   if (!food || isNaN(amount)) {
     alert("Please enter valid values");
     return;
@@ -41,25 +39,26 @@ submitBtn.addEventListener("click", () => {
   }
   //   construct query
   const query = `${food}`;
-
+  
   // call API
   fetch(
     `https://api.calorieninjas.com/v1/nutrition?query=${encodeURIComponent(query)}`, {
-        headers: {
-            "X-Api-Key" : apiKey,
-        },
+      headers: {
+        "X-Api-Key" : apiKey,
+      },
     })
     .then((res) => res.json())
     .then((data) => {
-        console.log("API response:",data)
+      console.log("API response:",data)
       if (!data.items || data.items.length === 0 ) {
         alert("Could not fetch nutrition data.");
         return;
-       }
+      }
       const result = data.items[0];
       const calories = result.calories;
+        const foodTotalCalories = parseFloat(calories) * parseFloat(amount);
 
-      const foodItem = { food, calories, amount };
+      const foodItem = { food,calories:foodTotalCalories,amount };
       // save to storage
       foodData.push(foodItem);
       localStorage.setItem("foodData", JSON.stringify(foodData));
