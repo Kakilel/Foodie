@@ -107,7 +107,7 @@ header img{
 .about-btn:hover{
     cursor: pointer;
     background-color: white;
-    color: red;
+    color: rgb(111, 210, 44);
     transform: scale(1.1);
     }
     /* INPUTS_SECTION */
@@ -161,7 +161,7 @@ header img{
 .submit-btn:hover{
     cursor: pointer;
     background-color: white;
-    color: red;
+    color: rgb(25, 231, 25);
     transform: scale(1.1);
 }
 
